@@ -17,7 +17,7 @@ export default {
     return JSON.parse(window.localStorage.getItem(config.namespace) || '{}');
   },
   clearItem(key) {
-    let storage = this.getStroage();
+    let storage = this.getStorage();
     delete storage[key];
     window.localStorage.setItem(config.namespace, JSON.stringify(storage));
   },
